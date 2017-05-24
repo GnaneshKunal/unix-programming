@@ -1,1 +1,4 @@
 *.out
+apue.3e/
+*.list
+test*
