@@ -3,3 +3,5 @@ apue.3e/
 *.list
 test*
 .vscode/
+*.hole
+*.nohole
