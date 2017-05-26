@@ -8,8 +8,8 @@ int main(void) {
     int n, fdp_in, fdp_out;
     char buf[MAXSIZE];
 
-    //dup actually duplicates file descriptor
-    //with dup2, you can choose your own fd number
+    //dup actually duplicates file descriptor (or) with fcntl(fd, F_DUPFD, 0);
+    //with dup2, you can choose your own fd number (or) with fcntl(fd, F_DUPFD, 7);
 
     fdp_in = dup(STDIN_FILENO);
     fdp_out = dup2(STDOUT_FILENO, 7);
