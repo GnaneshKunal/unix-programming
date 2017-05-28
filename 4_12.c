@@ -9,17 +9,17 @@ int main(void) {
     char *buf = malloc(200 * sizeof(char));
     if (stat("foo", &statbuf) < 0) {
         strcpy(buf, "stat error for foo");
-        write(STDIN_FILENO, buf, strlen(buf));
+        write(STDOUT_FILENO, buf, strlen(buf));
         exit(1);
     }
     if (chmod("foo", (statbuf.st_mode & ~S_IXGRP) | S_ISGID) < 0) {
         strcpy(buf, "chmod error for foo");
-        write(STDIN_FILENO, buf, strlen(buf));
+        write(STDOUT_FILENO, buf, strlen(buf));
         exit(1);
     }
     if (chmod("bar", S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH) < 0) {
         strcpy(buf, "chmod error for bar");
-        write(STDIN_FILENO, buf, strlen(buf));
+        write(STDOUT_FILENO, buf, strlen(buf));
         exit(1);
     }
     free(buf);
