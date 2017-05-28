@@ -22,5 +22,6 @@ int main(void) {
         write(STDIN_FILENO, buf, strlen(buf));
         exit(1);
     }
+    free(buf);
     exit(0);
 }
