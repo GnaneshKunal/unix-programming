@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-#define SAMPLE "SAMPLE_STRING"
-#define TEST "TEST_STRING"
-
 extern char **environ;
 
 int main() {
