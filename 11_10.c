@@ -22,7 +22,7 @@ struct foo * foo_alloc(int id) { //allocate the object
     return fp;
 }
 
-void foo_fold(struct foo *fp) { //add a reference to the object
+void foo_hold(struct foo *fp) { //add a reference to the object
     pthread_mutex_lock(&fp->f_lock);
     fp->f_count++;
     pthread_mutex_unlock(&fp->f_lock);
