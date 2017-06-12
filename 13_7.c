@@ -69,10 +69,10 @@ int main(int argc, char **argv) {
         exit(1);
     }
     sigfillset(&mask);
-    if ((err = pthread_sigmask(SIG_BLOCK, &mask, NULL)) {
+    if ((err = pthread_sigmask(SIG_BLOCK, &mask, NULL)) != 0) {
         puts("SIG_BLOCK eror");
         exit(1);
-    });
+    }
 
     //create a thread to handle SIGHUP and SIGTERM
 
