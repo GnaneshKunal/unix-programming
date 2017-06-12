@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
     char *cmd;
     struct sigaction sa;
 
-    if ((cmd = strchr(argv[0], '/')) == NULL)
+    if ((cmd = strrchr(argv[0], '/')) == NULL)
         cmd = argv[0];
     else cmd++;
 
