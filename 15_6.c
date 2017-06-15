@@ -28,6 +28,10 @@ int main(int argc, char **argv) {
     if (pipe(fd) < 0) {
         puts("pipe error");
         exit(1);
+    }
+    if ((pid = fork()) < 0) {
+        puts("fork error");
+        exit(1);
     } else if (pid > 0) {
         close(fd[0]); // close read end
 
