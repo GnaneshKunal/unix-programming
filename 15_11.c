@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
         exit(1);
     }
 
-    if ((fpin = fopen(argv[1], "r")) == NULL ) {
+    if ((fpin = fopen(argv[1], "r")) == NULL) {
         printf("can't open %s\n", argv[1]);
     }
 
@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
             puts("fputs error to pipe");
             exit(1);
         }
-    } 
+    }
 
     if (ferror(fpin)) {
         puts("fgets error");
