@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #if defined(SOLARIS)
-#include <netindet/in.h>
+#include <netinet/in.h>
 #endif
 #include <arpa/inet.h>
 #include <netdb.h>
